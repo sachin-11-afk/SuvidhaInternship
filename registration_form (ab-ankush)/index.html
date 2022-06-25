@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Registration form</title>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        src="./images/registration_icon.png"
+        alt="registration_icon"
+        class="registration_icon"
+      />
+      <div class="registration">
+        <div class="progress-bar">
+          <div class="step">
+            <div class="bullet"><span>1</span></div>
+          </div>
+          <div class="step">
+            <div class="bullet"><span>2</span></div>
+          </div>
+          <div class="step">
+            <div class="bullet"><span>3</span></div>
+          </div>
+          <div class="step">
+            <div class="bullet"><span>4</span></div>
+          </div>
+        </div>
+        <form action="" id="form1">
+          <h3>Create Account</h3>
+          <input type="text" placeholder="First Name" required />
+          <input type="text" placeholder="Last Name" required />
+          <input type="number" placeholder="Mobile Number" required />
+          <input type="email" placeholder="Email" required />
+
+          <div class="btn-box">
+            <button type="button">Next</button>
+          </div>
+        </form>
+
+        <form action="" id="form2">
+          <h3>Create Account</h3>
+          <textarea
+            name="Address"
+            id=""
+            cols="40"
+            rows="5"
+            placeholder="Address"
+          ></textarea>
+          <input type="radio" name="Male" id="" />
+          <label for="Male">Male</label>
+          <input type="radio" name="female" id="" />
+          <label for="female">Female</label>
+          <input type="radio" name="other" id="" />
+          <label for="other">Other</label>
+          <input type="number" placeholder="Whatsapp Number" required />
+          <input
+            type="date"
+            placeholder="Date of Birth"
+            required
+            style="color: #777"
+          />
+
+          <div class="btn-box">
+            <button type="button">back</button>
+            <button type="button">Next</button>
+          </div>
+        </form>
+
+        <form action="" id="form3">
+          <h3>Volunteer information</h3>
+          <select name="volunteer Role" value="volunteer Role" required>
+            <option value="">--select role--</option>
+            <option value="">volunteer</option>
+          </select>
+          <label for="volunteer Role">volunteer Role:</label>
+          <input type="text" placeholder="Current Job Role" required />
+          <input type="text" placeholder="Current Company" required />
+          <input type="text" placeholder="Aadhar Number" required />
+
+          <div class="btn-box">
+            <button type="button">back</button>
+            <button type="button">Next</button>
+          </div>
+        </form>
+
+        <form action="" id="form4">
+          <h3>Volunteer information</h3>
+          <input
+            type="file"
+            placeholder="Volunteer image"
+            name="Volunteer image"
+            required
+          />
+          <label for="Volunteer image">Volunteer image:</label>
+          <input type="password" name="password" placeholder="Passowrd" id="" />
+          <input
+            type="password"
+            name="confirm password"
+            placeholder="Confirm Passowrd"
+            id=""
+          />
+
+          <div class="btn-box">
+            <button type="button">back</button>
+            <button type="button">Next</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
