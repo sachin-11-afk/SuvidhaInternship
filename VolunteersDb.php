@@ -5,7 +5,7 @@
     $ContactNo = $_POST['ContactNo'];
 	$Email = $_POST['Email'];
     $Address = $_POST['Address'];
-    $VolunteerRole = $_POST['VolunterRole'];
+    $VolunteerRole = $_POST['VolunteerRole'];
     $CurrentJobRole = $_POST['CurrentJobRole'];
     $CurrentCompany= $_POST['CurrentCompany'];
     $AadharNo= $_POST['AadharNo'];
