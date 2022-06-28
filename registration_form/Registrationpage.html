@@ -12,7 +12,7 @@
     <div class="cont">
       <h2>Registration Form</h2>
       <div id = "Reg-form">
-         <form action="VolunteersDb.php" method="post">
+         <form name="VolRegForm" action="VolunteersDb.php" method="post">
             <div class="input-name" id="name">
                 <i class="fa fa-user lock"></i>
             <input type="text" name="FirstName" placeholder = "First Name" required class="name">
@@ -20,7 +20,7 @@
             <input type="text" name="LastName" placeholder = "Last Name" class="name x" required>
 
             </div>
-            
+
             <div class="input-name">
                <label for ="Male">Male</label>
                <input type="radio" name="gender" value="m" class="radio">
@@ -32,7 +32,7 @@
             <div>
                <div class="input-name">
                 <i class="fa fa-phone lock"></i>
-               <input type="number" name="ContactNo" placeholder="Phone Number"  class="a"><br>
+               <input type="number" step="0.01" name="ContactNo" placeholder="Phone Number" class="a" id="cno"><br>
                </div>
                <div class="input-name">
                 <i class="fa fa-envelope email"></i>
@@ -46,7 +46,7 @@
             </div>
                <div class="input-name">
                 <i class="fa fa-user lock"></i>
-               <select name="VolunterRole" id="" class="a">
+               <select name="VolunteerRole" id="" class="a">
                   <option selected disabled value="">Select Role</option>
                   <option value="Volunteer">Volunteer</option>
                </select>
@@ -54,7 +54,7 @@
             </div>
                <div class="input-name">
                 <i class="fa fa-user lock"></i>
-               <input type="text" name="CurrentJobRole" placeholder="Current Job Rule"   class="a"><br>
+               <input type="text" name="CurrentJobRole" placeholder="Current Job Role" class="a"><br>
                </div>
                <div class="input-name">
                 <i class="fa fa-user lock"></i>
@@ -62,11 +62,11 @@
                </div>
                <div class="input-name">
                 <i class="fa fa-user lock"></i>
-               <input type="number" name="AadharNo." placeholder="Aadhar Number" class="a"><br>
+               <input type="number" step="0.01" name="AadhaarNo." placeholder="Aadhaar Number" class="a" id="ano"><br>
                </div>
                <div class="input-name">
                 <i class="fa fa-whatsapp lock"></i>
-               <input type="number" name="WhatsAppNo." placeholder="Whatsapp Number" class="a"><br>
+               <input type="number" step="0.01" name="WhatsAppNo." placeholder="WhatsApp Number" class="a" id="wno"><br>
             </div>
                <div class="input-name">
                 <i class="fa fa-calendar lock"></i>
@@ -88,20 +88,57 @@
             </div>
             </br>
             <div class="input-name">
-                <input type="submit" value="Submit" class="btn">
+                <input type="submit" value="Submit" onClick="validateform()" class="btn">
             </div>
       </div>
       </form>
       </div>
     </div>
       <script>
+         function validateform(e)
+         {
+           e.preventDefault();
+           var cno1 = document.getElementById("cno");
+           var wno1 = document.getElementById("wno");
+           var ano1 = document.getElementById("ano");
+           if (cno1.value.length !== 10)
+           {
+             window.alert("Invalid Phone Number");
+             cno1.focus();
+           }
+           else if (wno1.value.length !== 10)
+           {
+             window.alert("Invalid WhatsApp Number");
+             wno1.focus();
+           }
+           else if (ano1.value.length !== 12)
+           {
+             window.alert("Invalid Aadhaar Number");
+             ano1.focus();
+           }
+           else
+           {
+             form.submit();
+           }
+         }
+         var form = document.getElementsByName('VolRegForm')[0];
+         form.addEventListener('submit', validateform);
+
          var password = document.getElementById("password")
            , confirm_password = document.getElementById("confirm_password");
-         
-         function validatePassword(){
-           if(password.value != confirm_password.value) {
+
+         function validatePassword()
+         {
+           if(password.value !== confirm_password.value)
+           {
              confirm_password.setCustomValidity("Passwords Don't Match");
-           } else {
+           }
+           else if(password.value.length < 8 || confirm_password.value.length < 8)
+           {
+             confirm_password.setCustomValidity("Both Password & Confirm Password must be at least 8 characters");
+           }
+           else
+           {
              confirm_password.setCustomValidity('');
            }
          }
