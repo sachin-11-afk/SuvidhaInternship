@@ -21,8 +21,8 @@
 		echo "$conn->connect_error";
 		die("Connection Failed : ". $conn->connect_error);
 	} else {
-		$stmt = $conn->prepare("insert into registration(FirstName, LastName, gender, ContactNo, Email, Address, VolunteerRole, CurrentJobRole, CurrentCompany, AadharNo, WhatsAppNo, DOB, VolunteerImage, Password, ConfirmPassword) 
-        values(?, ?, ?, ?, ?, ?,?,?, ?, ?, ?, ?, ?)");
+		$stmt = $conn->prepare("INSERT INTO users (FirstName, LastName, gender, ContactNo, Email, Address, VolunteerRole, CurrentJobRole, CurrentCompany, AadharNo, WhatsAppNo, DOB, VolunteerImage, Password, ConfirmPassword) 
+        VALUES(?, ?, ?, ?, ?, ?,?,?, ?, ?, ?, ?, ?)");
 		$stmt->bind_param("sssisssssiidiss", $FirstName, $LastName, $gender, $ContactNo, $Email, $Address, $VolunteerRole, $CurrentJobRole, $CurrentCompany, $AadharNo, $WhatsAppNo, $DOB, $VolunteerImage, $Password, $ConfirmPassword);
 		$execval = $stmt->execute();
 		echo $execval;
