@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  font-size: 14px;
+  background: #f2f2f2;
+}
+.cont {
+  border-top: 5px solid #fbb605;
+  background-color: white;
+  width: 800px;
+  height: auto;
+  padding: 25px;
+  margin: 20px auto 0;
+  box-shadow: 0 0 6px 7px rgba(0, 0, 0, 0.5);
+}
+.cont h2 {
+  font-size: 25px;
+  line-height: 24px;
+  padding: 30px;
+  text-align: center;
+}
+.input-name {
+  width: 90%;
+  position: relative;
+  margin: 20px auto;
+}
+
+#name .x {
+  margin-left: 35px;
+}
+
+.lock {
+  padding: 8px 11px;
+}
+.name {
+  width: 45%;
+  padding: 8px 0 8px 40px;
+}
+.a {
+  width: 100%;
+  padding: 8px 0px 8px 40px;
+}
+.input-name label {
+  margin-left: 12px;
+}
+.input-name i {
+  position: absolute;
+  font-size: 14px;
+  border-right: 1px solid black;
+  height: 100%;
+}
+
+image {
+  width: 90%;
+  position: relative;
+  margin: 20px auto;
+}
+.image i {
+  position: absolute;
+  font-size: 18px;
+}
+.email {
+  padding: 8px;
+}
+.name {
+  width: 318px;
+}
+.a,
+.name {
+  border: 1px solid #cccccc;
+  outline: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.image {
+  width: 90%;
+  position: relative;
+  margin: 20px auto;
+}
+.radio {
+  margin-right: 4px;
+  font-size: 16px;
+}
+.image label {
+  margin-left: 10px;
+}
+.btn {
+  background-color: #fbb605;
+  box-sizing: border-box;
+  color: #fff;
+  padding: 8px;
+  font-size: 15px;
+  width: 100%;
+  border: 2px solid #fbb605;
+  border-radius: 10px;
+  outline: none;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: transparent;
+  color: #000;
+}
+
+@media (max-width: 900px) {
+  .cont {
+    width: 600px;
+  }
+
+  #name {
+    height: 100px;
+  }
+
+  #name i {
+    padding: 10px;
+    height: 35px;
+  }
+
+  #name input {
+    width: 100%;
+  }
+  #name .x {
+    margin-left: 0;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 700px) {
+  .cont {
+    width: 400px;
+    padding: 10px;
+  }
+}
