@@ -18,8 +18,8 @@
             <button type="button" onclick="register()" class="toggle-btn">Register</button>
             <button onclick="login()" type="button" class="toggle-btn">Login</button>
          </div>
-         <form name="VolRegForm" id="register" action="VolunteersDb.php" method="post">
-            <div class="input-name">
+         <form name="VolRegForm" id="register" action="VolunteersDb.php" method="post" enctype="multipart/form-data">
+             <div class="input-name">
                <i class="fa fa-user lock"></i>
                <input type="text" name="FirstName" placeholder = "First Name" required class="name" required>
                <span>
@@ -52,7 +52,7 @@
                </div>
                <div class="input-name">
                   <i class="fa fa-user lock"></i>
-                  <select name="VolunterRole" id="" class="a">
+                  <select name="VolunteerRole" id="" class="a">
                      <option selected disabled value="">Select Role</option>
                      <option value="Volunteer">Volunteer</option>
                   </select>
@@ -68,22 +68,22 @@
                </div>
                <div class="input-name">
                   <i class="fa fa-user lock"></i>
-                  <input type="number" name="AadharNo." placeholder="Aadhar Number" class="a" id ="ano"><br>
+                  <input type="number" name="AadharNo" placeholder="Aadhar Number" class="a" id ="ano"><br>
                </div>
                <div class="input-name">
                   <i class="fa fa-whatsapp lock"></i>
-                  <input type="number" name="WhatsAppNo." placeholder="Whatsapp Number" required class="a" id="wno"><br>
+                  <input type="number" name="WhatsAppNo" placeholder="Whatsapp Number" required class="a" id="wno"><br>
                </div>
                <div class="input-name">
                   <i class="fa fa-calendar lock"></i>
                   <input type="date" name="DOB" placeholder="" required class="a"><br>
                </div>
                <div class="image">
-                  <!-- <i class="fa fa-user "></i> -->
+                  
                   <label for="VolunteerImage">Volunteer Image</label>
-                  <input type="file" accept=".jpeg,.jpg,.png" name="VolunteerImage" required placeholder="Volunteer Image" class="a"><br>
+                  <input type="file" accept=".jpeg,.jpg,.png" name="file" required placeholder="Volunteer Image" class="a"><br>
                </div>
-               <div class="input-name">
+              <div class="input-name">
                   <i class="fa fa-lock lock"></i>
                   <input type="password" id="password" name="Password" placeholder="Password" class="a" required><br>
                </div>
@@ -91,7 +91,7 @@
                   <i class="fa fa-lock lock"></i>
                   <input type="password" id="confirm_password" name="ConfirmPassword" placeholder="Confirm Password" class="a" required>
                </div>
-            </div>
+            </div> 
             </br>
             <div class="input-name">
                <input type="submit" value="Submit" class="btn">
