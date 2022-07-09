@@ -12,7 +12,7 @@
       $email=$_POST['Email'];
       $password=$_POST['password'];
 
-      $sql="select * from users where email=".$email."AND Password=".$password."limit 1";
+      $sql="select * from users where email="$email"AND Password="$password"limit 1";
 
       $result=mysql_query($sql);
 
