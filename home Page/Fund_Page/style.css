@@ -1,0 +1,136 @@
+@import "https://use.fontawesome.com/releases/v6.1.1/css/all.css";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+*{
+    margin: 0;
+    padding: 0;
+}
+.head{
+    width: 100%;
+    height: 80px;
+    border: 2px solid black;
+    border-right: none;
+    border-top: none;
+    border-left: none;
+    
+}
+.b{
+    padding:5px 0 5px 15px;
+
+}
+.center
+{
+   margin: auto;
+    /* transform: translate(-50%, -50%); */
+    height:auto;
+    width: 600px;
+    background: white;
+    /* box-shadow: 0 0 3px 0 #000; */
+    border: 1px solid black;
+    border-radius: 10px;
+    border-top: none;
+}
+.btn{
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    background-color: #2691d9;
+    box-shadow: 0 0 10px 0 #000;
+    border-color: #000;
+   margin-left:60%;
+   margin-top: -17px;
+   margin-bottom: 20px;
+   height: 40px;
+   width: 200px;
+   cursor:pointer;
+   border-radius: 7px;
+   border: none;
+   transition: .5s ease-in-out;
+}
+.btn:hover{
+    background-color: aqua;
+}
+.bottom{
+    font-size: 15px;
+    text-align: center;
+    padding: 20px;
+     /* position: absolute; */
+     /* padding-left: 29%; */
+    /* bottom: 50px;   */
+    color: #fbb605;   
+}
+.text3{
+    padding-top:20px;
+    text-align: center;
+    color: #fbb605;
+    font-size: 20px; 
+}
+.text1{
+    text-align: center;
+    padding-top:10px;
+    font-size: 20px;
+}
+.inpu{
+    width: 60%;
+    height: 30px;
+    margin-left:10px;
+    margin-right: 10px;
+    border-left:none;
+    border-right:none;
+    border-top:none;
+    outline: none;
+}
+.center p{
+    padding: 10px;
+}
+.center small{
+    padding: 10px;
+}
+.center p span{
+    color: red;
+    padding: 5px;
+}
+.text1 p span i{
+    padding: 10px;
+}
+   .check{
+    height:26px;
+       width:33px;
+       outline: none;
+    }
+    .c{
+       padding:15px;
+       display: flex;
+    }
+    
+    @media (max-width:700px){
+        .center{
+        width:493px;
+            }
+    .btn{
+       width:145px;
+       margin-left:55%;
+    }
+}
+
+
+     @media (max-width:480px){
+        .center{
+            width:300px;
+                }
+                .btn{
+                    margin-left:35%;
+                 }
+                 .inpu{
+                    width: 80%;
+                 }
+    }
+    @media (max-width:300px){
+        .center{
+            width: 250px;
+        }
+        .inpu{
+            width: 85%;
+            }
+  
+
+    }
