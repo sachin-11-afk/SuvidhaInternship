@@ -1,0 +1,224 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #ddd; */
+}
+
+.container {
+    width: 25%;
+    height: 65%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 1em;
+    position: relative;
+    border-radius: 10px;
+}
+
+.error {
+    height: 95%;
+}
+
+.error form {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.error .icon {
+    width: 100px;
+    margin: auto;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.error h2 {
+    width: 80%;
+    text-align: center;
+    font-size: 1.2em;
+    margin: 8% auto;
+}
+
+.error .small-text {
+    width: 100%;
+    text-align: center;
+    padding: 1em;
+}
+
+.error .small-text>small {
+    width: 60%;
+    color: #aaa;
+}
+
+.error .input-container {
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.input-container .m-1 {
+    width: 1.5em;
+    /* height: 30px; */
+    font-size: 1em;
+    padding: 5px;
+    border: none;
+    border-bottom: 2px solid #aaa;
+    outline: none;
+}
+
+.error .btnsubmit {
+    display: block;
+    width: 40%;
+    margin: 1.8em auto;
+    padding: 1em;
+    background-color: #ff8f3e;
+    border: 1px solid #ff8f3e;
+    border-radius: 1.5rem;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.error .btnsubmit:hover {
+    background-color: #fff;
+    color: #ff8f3e;
+}
+
+.error .otp-resend p,
+.error .otp-resend a {
+    font-size: small;
+    text-align: center;
+    display: block;
+}
+
+@media (max-width: 1250px) {
+    .container {
+        width: 30%;
+    }
+    .container .error {
+        margin: 1em;
+    }
+}
+
+@media (max-width: 1250px) and (min-height: 800px) {
+    .container {
+        width: 40%;
+        height: 70%;
+        padding: 1em;
+    }
+    .container .error {
+        height: 90%;
+        margin: 2em;
+    }
+    .container .btnsubmit {
+        width: 50%;
+    }
+}
+
+@media (max-width: 1022px) {
+    .container {
+        width: 35%;
+    }
+    .error .input-container {
+        width: 50;
+    }
+}
+
+@media (max-width: 850px) {
+    .container {
+        width: 40%;
+    }
+}
+
+@media (max-width: 850px) and (min-height: 800px) {
+    .container {
+        width: 70%;
+        height: 70%;
+        padding: 2em;
+    }
+    .container .error {
+        margin: 0.3em;
+    }
+}
+
+@media (max-width: 850px) and (max-height: 800px) {
+    .container {
+        width: 70%;
+        height: 70%;
+        padding: 2em;
+    }
+}
+
+@media (max-width: 750px) {
+    .container {
+        width: 50%;
+    }
+    .error h2 {
+        font-size: small;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 60%;
+    }
+}
+
+@media (max-width: 500px) {
+    .container {
+        width: 80%;
+        padding: 0.7em;
+    }
+    .container .error {
+        margin: 0.5em;
+    }
+    .error .back-btn {
+        font-size: larger;
+    }
+    .error h2 {
+        font-size: smaller;
+    }
+    .error .small-text {
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+        font-size: smaller;
+    }
+    .error .input-container {
+        width: 90%;
+    }
+    .error .btnsubmit {
+        font-size: 10px;
+        width: 40%;
+    }
+}
+
+@media (max-width: 320px) {
+    .container {
+        height: 75%;
+        padding: 10px;
+    }
+    .container .error {
+        height: 80%;
+        margin: 30px 10px;
+    }
+    .error .back-btn {
+        padding: 0;
+        margin: 0;
+    }
+    .error h2 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
