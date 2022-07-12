@@ -9,11 +9,21 @@ body {
     background: #f2f2f2;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number]{
+    -moz-appearance: textfield;
+}
+
 .cont {
     border-top: 5px solid rgb(190, 176, 18);
     background-color: white;
     width: 800px;
-    height: 1070px;
+    height: 1100px;
     padding: 25px;
     margin: 20px auto 0;
     box-shadow: 0 0 6px 7px rgba(0, 0, 0, 0.5);
