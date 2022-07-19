@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="style_otp.css" />
+    <title>otp verification</title>
+  </head>
+  <body>
+    <div class="error">
+      <form>
+        <h2 class="form-heading">Enter OTP to verify your account</h2>
+        <img src="message.svg" alt="message icon" class="icon" />
+        <div class="small-text">
+          <small>we have sent OTP to your phone, <br />********5975</small>
+        </div>
+
+        <div class="input-container">
+          <input type="text" class="m-1" maxlength="1" />
+          <input type="text" class="m-1" maxlength="1" />
+          <input type="text" class="m-1" maxlength="1" />
+          <input type="text" class="m-1" maxlength="1" />
+          <input type="text" class="m-1" maxlength="1" />
+          <input type="text" class="m-1" maxlength="1" />
+        </div>
+        <!-- <input type="button" class="btnsubmit" value="continue" /> -->
+        <!--<button type="button" class="btnsubmit" onclick="fundraising2()">Continue</button>
+        <div class="otp-resend">
+          <p>didn't receive OTP?</p>
+          <a href="#" class="text"><u>resend</u></a>
+        </div>-->
+      </form>
+    </div>
+
+    <script>
+      const nums = document.querySelectorAll(".m-1");
+
+      nums.forEach((num, index) => {
+        num.dataset.id = index;
+
+        num.addEventListener("keyup", () => {
+          if (nums[nums.length - 1].value.length) {
+            return;
+          }
+
+          if (num.value.length === 1) {
+            nums[parseInt(num.dataset.id) + 1].focus();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
