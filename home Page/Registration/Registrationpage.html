@@ -16,7 +16,7 @@
          <h2>Join Us <span>As a Volunteer</span></h2>
          <div class="btn-box">
             <div id="bttn"></div>
-            <button type="button" onclick="register()" class="toggle-btn">Register</button>
+            <button onclick="register()" type="button" class="toggle-btn">Register</button>
             <button onclick="login()" type="button" class="toggle-btn">Login</button>
          </div>
          <form name="VolRegForm" id="register" action="VolunteersDb.php" method="post" enctype="multipart/form-data">
@@ -61,19 +61,19 @@
                </div>
                <div class="input-name">
                   <i class="fa fa-user lock"></i>
-                  <input type="text" name="CurrentJobRole" placeholder="Current Job Role"  required class="a"><br>
+                  <input type="text" name="CurrentJobRole" placeholder="Current Job Role" class="a"><br>
                </div>
                <div class="input-name">
                   <i class="fa fa-user lock"></i>
-                  <input type="text" name="CurrentCompany" placeholder="Current Company" required class="a"><br>
+                  <input type="text" name="CurrentCompany" placeholder="Current Company" class="a"><br>
                </div>
                <div class="input-name">
                   <i class="fa fa-user lock"></i>
-                  <input type="number" name="AadharNo" placeholder="Aadhar Number" class="a" id ="ano"><br>
+                  <input type="number" name="AadharNo" placeholder="Aadhaar Number" class="a" id ="ano"><br>
                </div>
                <div class="input-name">
                   <i class="fa fa-whatsapp lock"></i>
-                  <input type="number" name="WhatsAppNo" placeholder="Whatsapp Number" required class="a" id="wno"><br>
+                  <input type="number" name="WhatsAppNo" placeholder="WhatsApp Number" required class="a" id="wno"><br>
                </div>
                <div class="input-name">
                   <i class="fa fa-calendar lock"></i>
@@ -97,14 +97,14 @@
                <input type="submit" value="Submit" class="btn">
             </div>
          </form>
-         <form class="login-form" action="loginpage.php" id="login" method="POST">
+         <form name="LoginForm" class="login-form" action="loginpage.php" id="login" method="POST"><br>
             <div class="input-name">
                <i class="fa fa-envelope email"></i>
                <input type="email" name="Email" placeholder="Email" class="a" required><br>
             </div>
             <div class="input-name">
                <i class="fa fa-lock lock"></i>
-               <input type="password" id="password" name="Password" placeholder="Password" class="a" required><br>
+               <input type="password" id="lpassword" name="Password" placeholder="Password" class="a" required><br>
             </div>
             <div class="input-name">
                <input type="submit" value="Log in" class="btn">
@@ -112,7 +112,7 @@
             <div class="clearfix">
                <label class="float-left"
                   >
-               <input type="checkbox" /> Remember me</label
+               <input type="checkbox"/> Remember me</label
                   >
                <a href="#" class="float-right">Forgot Password?</a>
             </div>
@@ -127,7 +127,7 @@
             x.style.bottom = "0px";
             y.style.left = "0px";
             z.style.left = "0px";
-            cont.style.height = "1070px";
+            cont.style.height = "1100px";
             cont.style.width = "800px";
          }
          function login(){
@@ -137,9 +137,7 @@
             cont.style.height = "500px";
             cont.style.width = "500px";
          }
-      </script>
-      
-      <script>
+
          function validateform(e)
          {
            e.preventDefault();
@@ -168,9 +166,27 @@
          }
          var form = document.getElementsByName('VolRegForm')[0];
          form.addEventListener('submit', validateform);
+
+         function validatelogin(l)
+         {
+           l.preventDefault();
+           var lpass = document.getElementById("lpassword");
+           if (lpass.value.length < 8)
+           {
+             window.alert("Password must be at least 8 characters");
+             lpass.focus();
+           }
+           else
+           {
+             form1.submit();
+           }
+         }
+         var form1 = document.getElementsByName('LoginForm')[0];
+         form1.addEventListener('submit', validatelogin);
+
          var password = document.getElementById("password")
            , confirm_password = document.getElementById("confirm_password");
-         
+
          function validatePassword(){
            if(password.value != confirm_password.value) {
              confirm_password.setCustomValidity("Passwords Don't Match");
@@ -178,7 +194,7 @@
            else if(password.value.length < 8 || confirm_password.value.length < 8)
            {
              confirm_password.setCustomValidity("Both Password & Confirm Password must be at least 8 characters");
-           } 
+           }
            else {
              confirm_password.setCustomValidity('');
            }
