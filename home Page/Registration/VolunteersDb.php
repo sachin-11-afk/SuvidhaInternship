@@ -32,7 +32,7 @@ $insert = false;
    $sql="INSERT INTO users(firstname, LastName, gender , ContactNo, email, addr, VolunteerRole,photo, CurrentJobRole, CurrentCompany, AadharNo, WhatsAppNo, DOB,  Password, ConfirmPassword ) 
    values('$FirstName', '$LastName', '$gender' ,'$ContactNo', '$Email', '$Address', '$VolunteerRole','$filename', '$CurrentJobRole', '$CurrentCompany', '$AadharNo', '$WhatsAppNo', '$DOB', '$Password', '$ConfirmPassword')";
    
-   
+   mysqli_query($con, $sql);
    move_uploaded_file($tmp_name,$location.$filename);
    
    
