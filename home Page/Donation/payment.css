@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.payment{
+    padding: 5rem;
+}
+.payment h1{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-container{
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+.container1{
+    background: #ffa50087;
+    padding: 1rem;
+    margin: 2rem;
+    width: max-content;
+    height: max-content;
+    border-radius: 13px;
+    box-shadow: 3px 2px 5px 4px #00000066;
+}
+
+.container1 img{
+    border-radius: 12px;
+}
+.container1 h2{
+    text-align: center;
+    margin: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container2 {
+    padding: 3rem;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+.container2 .name{
+    margin: 1rem;
+}
+
+.container2 .amount{
+    margin: 1rem;
+}
+
+
+
+
+
+.container2 input{
+    width: 23rem;
+    height: 3rem;
+    border-radius: 8px;
+    padding: 1rem 4rem;
+    font-size: 1.5rem;
+}
+.container2  i{
+    position: relative;
+    right: 22rem;
+    font-size: 1.5rem;
+  
+}
+.container2 .buttons{
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+}
+.container2 .buttons button{
+    padding: 1rem 3rem;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    border: none;
+    background: #5858dcbf;
+    color: white;
+    font-weight: 900;
+    font-family: auto;
+    box-shadow: 2px 2px 2px 2px black;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.container2 .buttons button:hover{
+    padding: 1rem 3.4rem;
+    font-size: 1.4rem;
+}
+
+
